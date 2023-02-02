@@ -7,6 +7,7 @@ COMPATIBLE_MACHINE:qemu-generic-arm64 ?= "qemu-generic-arm64"
 
 OPTEEMACHINE ?= "${MACHINE}"
 OPTEEMACHINE:aarch64:qemuall ?= "vexpress-qemu_armv8a"
+OPTEEMACHINE:arm:qemuall ?= "vexpress-qemu_virt"
 
 OPTEE_ARCH = "null"
 OPTEE_ARCH:arm = "arm32"
