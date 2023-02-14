@@ -7,6 +7,12 @@ inherit deploy
 
 SRC_URI = "git://git.trustedfirmware.org/TF-A/trusted-firmware-a.git;protocol=https;name=tfa;branch=master \
            file://ssl.patch"
+
+SRC_URI:append = " file://0001-fix-auth-forbid-junk-after-extensions.patch \
+                file://0002-fix-auth-require-at-least-one-extension-to-be-presen.patch \
+                file://0003-fix-auth-avoid-out-of-bounds-read-in-auth_nvctr.patch \
+                file://0004-fix-auth-properly-validate-X.509-extensions.patch"
+
 UPSTREAM_CHECK_GITTAGREGEX = "^v(?P<pver>\d+(\.\d+)+)$"
 
 SRCREV_FORMAT = "tfa"
