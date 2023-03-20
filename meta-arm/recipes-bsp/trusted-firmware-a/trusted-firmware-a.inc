@@ -111,6 +111,9 @@ EXTRA_OEMAKE += "LD=${@remove_options_tail(d.getVar('LD'))}"
 
 EXTRA_OEMAKE += "CC=${@remove_options_tail(d.getVar('CC'))}"
 
+# The remove_options_tail() doesn't support ccache
+CCACHE_DISABLE = '1'
+
 # Verbose builds, no -Werror
 EXTRA_OEMAKE += "V=1 E=0"
 
